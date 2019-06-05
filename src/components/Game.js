@@ -18,7 +18,10 @@ const Game = props => {
     return (
         <div className="Game-container">
             <Scrollchor to="#" animate={{offset: 0, duration: 300}}>
-                <div className="Nav"><span className="Guess">Guess</span><span className="The">The</span><span className="Temp">Temp</span>°</div>
+                <div className="Nav">
+                    <div className="AppName">
+                        <span className="Guess">Guess</span><span className="The">The</span><span className="Temp">Temp</span>°
+                    </div></div>
             </Scrollchor>
             <div className="Middle-section">
                 <div className="Left-panel">
@@ -51,8 +54,8 @@ const Game = props => {
                         <ul className="City-list">
                             {renderCities}
                         </ul>
-                        <input className="Input-field" name={props.currentCity} type="number" placeholder="0°" onChange={props.handleChange}></input>
-                        <button className="Button" type="submit" value="" onClick={ (e) => props.handleSubmit(e)}>submit</button>
+                        <input className="Input-field" name={props.currentCity} type="number" placeholder="0" onChange={props.handleChange}></input>
+                        <button className="Button" type="submit" value="" onClick={ (e) => props.handleSubmit(e)}>GUESS</button>
                     </div>
                 </div>
                 <div className="Right-panel">

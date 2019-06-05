@@ -1,0 +1,1 @@
+export const cities = ['New York', 'London', 'Hong Kong', 'Sao Paulo', 'Nairobi'];

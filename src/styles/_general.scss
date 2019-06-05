@@ -1,0 +1,87 @@
+@keyframes slide {
+  0% {
+    background-position: 0% 20%;
+  }
+
+  50% {
+    background-position: 90% 90%;
+  }
+
+  100% {
+    background-position: 0% 20%;
+  }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    &:focus, &:focus{
+      outline: none;
+  }
+  }
+
+  #root {
+    height: max-content;
+  }
+
+  html {
+    background: url('../assets/images/blur-blue.jpg');
+    background-size: 400% 400%;
+    background-position: center;
+    animation: slide 45s ease-in-out infinite;
+    height: 100%;
+  }
+  a {
+    cursor: pointer;
+    &:link,
+    &:hover,
+    &:visited {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+  ul {
+    li {
+      list-style: none;
+    }
+  }
+
+  body {
+    height: 100%;
+    display: flex;
+    width: 100vw;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4{
+    cursor: default;
+  }
+  
+  
+  .collapse-row-column {
+    display: flex;
+    flex-direction: column;
+  
+    @include mobile {
+      flex-direction: column;
+    }
+  
+    @include tablet {
+      flex-direction: row;
+    }
+  
+    @include tabtop {
+      flex-direction: row;
+    }
+    
+    @include desktop {
+      flex-direction: row;
+    }
+    
+  }
+  
+  
